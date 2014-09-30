@@ -1,1 +1,8 @@
+# Python
+*.py[cod]
+
+# OS X
+.DS_Store
+
+# settings file
 settings.py
