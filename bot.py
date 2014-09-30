@@ -1,7 +1,7 @@
 """"
-Reddit currency conversion bot 1.0.0
+Reddit currency converter bot 1.0.0
 
-http://github.com/frdmn/reddit-currency-conversion
+http://github.com/frdmn/reddit-currency-converter
 """
 
 # Import modules
@@ -13,7 +13,7 @@ from pprint import pprint # @TODO: remove this!
 import settings
 
 # Set user agent
-user_agent = ("Currency conversion bot 1.0.0 by /u/frdmn "
+user_agent = ("Currency converter bot 1.0.0 by /u/frdmn "
             "github.com/frdmn/reddit-currency-bot/")
 
 # Connect to Reddit API
