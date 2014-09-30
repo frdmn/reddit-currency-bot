@@ -1,7 +1,9 @@
-Reddit currency converter bot
-=============================
+Reddit currency converter bot (WIP)
+===================================
 
 Reddit bot that searches through random submissions and trying to convert foreign currencies.
+
+The project is a work in progress!
 
 ### Requirements
 
