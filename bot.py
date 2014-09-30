@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """"
 Reddit currency converter bot 1.0.0
@@ -9,6 +9,8 @@ http://github.com/frdmn/reddit-currency-converter
 # Import modules
 import time
 import praw
+import random
+
 from pprint import pprint # @TODO: remove this!
 
 # Import settings file
@@ -29,8 +31,8 @@ processed_comments = []
 
 # Infinite loop
 while True:
-    # Select subreddit to observe
-    subreddit = r.get_subreddit(settings.observed_subreddits)
+    # Select random subreddit to observe
+    subreddit = r.get_subreddit(random.choice(settings.observed_subreddits))
     # Loop through the hottest 10 submissions
     for submission in subreddit.get_hot(limit=10):
         # Remove hierachy and loop through them
@@ -45,7 +47,7 @@ while True:
                 found_currency = any(string in comment.body for string in settings.currency_keywords)
                 if found_currency:
                     # Send console output
-                    msg = '[Currency bot](%s)' % comment.permalink
+                    msg = '/r/%s: %s' % (subreddit, comment.permalink)
                     # r.send_message('frdmn', 'PRAW Thread', msg)
                     print msg
                     # Add to array so we don't process this comment again
