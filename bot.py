@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """"
 Reddit currency converter bot 1.0.0
 
