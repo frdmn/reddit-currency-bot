@@ -47,7 +47,7 @@ while True:
                 found_currency = any(string in comment.body for string in settings.currency_keywords)
                 if found_currency:
                     # Send console output
-                    msg = '/r/%s: %s' % (subreddit, comment.permalink)
+                    msg = '/r/%s /u/%s (%s)' % (subreddit, comment.author.name, comment.id)
                     # r.send_message('frdmn', 'PRAW Thread', msg)
                     print msg
                     # Add to array so we don't process this comment again
